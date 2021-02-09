@@ -1,0 +1,527 @@
+/*Selectores*/
+/*de etiqueta - se refiere a los elementos tag html que queremos manipular */
+/*header, section, article, nav, div*/
+/*header{
+    Todo esto es una declaración, la primera parte color es una
+    propiedad y el valor que se le da es el valor de la propiedad.
+    color: green;
+    background-color: pink;
+}*/
+/*Selector descendente
+body header nav ol li a{
+    font-weight: bold;
+}*/
+/*selector de clase
+.link{
+    font-size: 15px;
+}*/
+/*Selector de ID
+#experiencias-destacadas{
+    background-color: aqua;
+}*/
+/*La diferencia entre las clases y los ID's es que el ID
+se le asigna a un solo elemento HTML mientras la clase uno o más del DOM.
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+}
+.container{
+    max-width: 1360px;
+    /* width: 100%; */
+    flex: 1;
+    margin:0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
+/*Hero phrase*/
+h1{
+    font-size: 60px;
+    line-height: 1.5em;
+    letter-spacing: -2px;
+    /*text-transform:uppercase;*/
+    text-decoration: dashed;
+    font-weight: bold;
+    color: white;
+}
+h1 strong{
+    color: rgb(50, 68, 168);
+}
+/*Header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1b2127;
+    color: white;
+    height: 150px;
+    flex-wrap: wrap;
+}
+.logo{
+    height: inherit;
+}
+.logo-img{
+    width: 450px;
+    height: 140px;
+}
+.menu{
+    display: flex; 
+    padding: 0 100px 0px 0px;
+}
+li{
+    font-size: 25px;
+}
+li a{
+    font-size: 1em;
+    color:white;
+    text-decoration: none;
+}
+.header ol{
+    display: flex;
+    list-style: none;
+    align-self: center;
+}
+header li{
+    padding: 0px 10px 0px 15px;
+}
+
+/*Fin del header*/
+
+/*Inicio de section hero*/
+.hero{
+    display: flex;
+    height: 500px;
+    background-color: #1b2127;
+/* Recibe primero el ancho width y luego el alto height
+    background-size: 600px 500px;
+permite repetir o que no se repita la imagen
+    background-repeat: no-repeat;
+Permite modificar la posicion
+    background-position-x: right; */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.hero .hero-phrase{
+    display: flex;
+    height: inherit;
+    width: 1000px;
+    align-items: center;
+    justify-content: center;
+}
+.hero-image{
+    object-fit: cover;
+}
+/*Fin de Hero*/
+
+/*Inicio de section Experiencias*/
+h2{
+    font-size: 2em;
+    padding: 10px;
+    /*border: blue;
+    border-style: solid;*/
+    color: #026fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.experiences{
+    background: #fafafa;
+    height: auto;
+    padding: 20px;
+}
+.javascript{
+    display: flex;
+    justify-content: space-between;
+    border: 2px gray;
+    border-radius: 10px;
+    border-style:solid;
+    margin-bottom: 15px;
+    padding: .5%;
+    background: white;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.javascript-details{
+    width: 48%;
+    margin-left: 10px;
+}
+.javascript-nombrecurso{
+    font-size: 35px;
+    margin-bottom: 0px;
+}
+.javascript-profesor{
+    font-size: 20px;
+}
+.javascript-profesor,
+.javascript-fecha,
+.javascript-url
+{
+    margin: 20px 0px;
+}
+.javascript-detalle{
+    font-size: 20px;
+}
+.javascript img{
+    width: 48%;
+}
+.javascript-img img{
+    width: 600px;
+    height: 450px;
+}
+.javascript strong{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+/*Eventos*/
+.events{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.evento{
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 48%;
+    /* height: 48%; */
+    border-radius: 10px;
+    /* overflow: hidden;
+    flex-shrink: 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4fbff;
+    margin: 1%;
+}
+.evento-imagen{
+    width: 500px;
+    height: 450px;
+}
+
+.evento-details{
+    background-color: white;
+    margin-top: -150px;
+    position: relative;
+    padding: 25px 50px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+.evento-descripcion{
+    text-align: left;
+}
+.evento-link{
+    border: 1px solid;
+    padding:5px 50px;
+    text-decoration: none;
+    color: #056fff;
+    border-radius: 5px;
+}
+.evento-descripcion{
+    font-size: 1em;
+}
+
+/*contact*/
+.form-email input{
+    border:1px solid gray;
+    padding: 10px 20px 10px 35px;
+    background-image: url(../img/envelope.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x:10px ;
+    background-size: 15px 20px;
+    border-radius: 5px;
+}
+.form-email button{
+    display: block;
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 30px;
+    /* margin: 100px; */
+    /* margin: 0 auto; */
+    margin-top: 10px;
+    width: 150px;
+    height: 45px;
+}
+.form-email h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+}
+#contact-phrase{
+    font-size: 1.8em;
+}
+#email{
+    width: 250px;
+}
+.contact{
+    background-color: #056fff;
+    color:white;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+.social-link{
+    /* border:1px solid white; */
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    background-size: cover;
+    margin:0px 10px;
+}
+.social-link.facebook{
+    background-image: url('../img/facebook.svg');
+    
+}
+.social-link.twitter{
+    background-image: url('../img/twitter.svg');
+    
+}
+.social-link.instagram{
+    background-image: url('../img/instagram.svg');
+    
+}
+.social-link.github{
+    background-image: url('../img/github.svg');
+    
+}
+/*Footer*/
+.footer{
+    color: white;
+    background: #1b2127;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+}
+.container .thanks1{
+    display: flex;
+    margin: 0px 0px;
+    justify-content: center;
+}
+.container .thanks2{
+    display: flex;
+    margin: 0px 0px;
+    justify-content: center;
+}
+.footer .thanks1{
+    width: 50%;
+}
+.footer .thanks2{
+    display: flex;
+    width: 50%;
+}
+.footer img{
+    vertical-align: middle;
+}
+.footer a{
+    color: white;
+}
+
+/* Media queries */
+@media screen and (max-width:1231px){
+    .container{
+        padding: 1em;
+    }
+    .header .logo{
+        text-align: center;
+        padding: 0;
+    }
+    .logo-img{
+        width: auto;
+    }
+    .header{
+        height: auto;
+        display: block;
+    }
+    .menu{
+        display: block;
+        padding: 0;
+    }
+    .header ol{
+        display: block;
+    }
+    .header ol li{
+        display: flex;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    /* experiencias */
+    .javascript{
+        display: block;
+    }
+    .javascript-imgContainer{
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    .javascript-imgContainer img{
+        max-width: 100%;
+    }
+    .javascript-details{
+        width: auto;
+        font-size: 20px;
+        margin-bottom: .8em;
+    }
+    .javascript-img img{
+        height: auto;
+        width: auto;
+    }
+    /* detalles del articulo - parrafo*/
+    .javascript-nombrecurso{
+        font-size: 1.5em;
+    }
+    .javascript-profesor{
+        font-size: 1em;
+    }
+    .javascript-fecha{
+        font-size: 1em;
+    }
+    .javascript-url{
+        font-size: 1em;
+    }
+    .javascript-detalle{
+        font-size: .8em;
+    }
+    .javascript-profesor, .javascript-fecha, .javascript-url{
+        margin: .5em 0;
+    }
+    .evento{
+        width: auto;
+        flex-shrink:1;
+    }
+    .evento-imagen{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:778px){
+    .javascript-details{
+        width: auto;
+        font-size: 20px;
+        margin-bottom: .8em;
+    }
+    .evento{
+        width: auto;
+        flex-shrink:initial;
+    }
+    .evento-imagen{
+        width: 100%;
+    }
+    .contact{
+        height: auto;
+        padding: 1em 0em;
+        text-align: center;
+        display: block;
+    }
+    .form-email button{
+        /* centrar */
+        margin:1em auto;
+        font-size: 1.2em;
+    }
+    .footer{
+        display: block;
+        border: 1px solid transparent;
+    }
+    .footer .thanks1{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .footer .thanks2{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .thanks1 .thanks2{
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .logo-img{
+        height: 120px;
+    }
+    li{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    .javascript-details{
+        width: auto;
+        font-size: 15px;
+        margin-bottom: .8em;
+    }
+    .evento-descripcion{
+        font-size: 0.8em;
+    }
+    .evento-link{
+        font-size: 0.8em;
+        padding: 1em;
+    }
+    .evento-details{
+        /* font-size:16px */
+        margin: -8em .5em .5em .5em;
+        padding: 1em;
+    }
+    .form-email button{
+        /* centrar */
+        font-size: 1em;
+    }
+    #contact-phrase{
+        font-size: 1.2em;
+    }
+    .social-link{
+        height: 50px;
+        width: 50px;
+    }
+    #email{
+        width: 200px;
+    }
+    .footer{
+        height: auto;
+    }
+}
+
+@media screen and (max-width:319px){
+    h2{
+        font-size: 1.7em;
+    }
+    .link{
+        font-size: 0.7em;
+    }
+    #email{
+        width: 150px;
+    }
+}
